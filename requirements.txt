@@ -1,5 +1,6 @@
 asgiref==3.9.1
 attrs==25.3.0
+certifi==2025.7.14
 Django==5.2.4
 django-jazzmin @ git+https://github.com/farridav/django-jazzmin.git@d269874c96fe5ff6d231c3017cdd4650bc2f3105
 djangorestframework==3.16.0
