@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-*k1_40%cvfrcxmczlgel5)%=x%+9)x(sb(k^177ta=5#izsp=t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['navis-asset-mkl6.onrender.com']
 
 
 INSTALLED_APPS = [
