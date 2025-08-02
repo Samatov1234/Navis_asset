@@ -62,3 +62,4 @@ urllib3==2.5.0
 virtualenv==20.32.0
 xattr==1.2.0
 zstandard==0.23.0
+django-cors-headers
