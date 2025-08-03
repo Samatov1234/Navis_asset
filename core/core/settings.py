@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-*k1_40%cvfrcxmczlgel5)%=x%+9)x(sb(k^177ta=5#izsp=t'
@@ -5,6 +6,13 @@ DEBUG = True
 ALLOWED_HOSTS = ['*']
 
 
+JAZZMIN_SETTINGS = {
+    "site_title": "Navis Admin",
+    "site_header": "Navis Админка",
+    "site_brand": "Navis",
+    "welcome_sign": "Добро пожаловать в Navis!",
+    "copyright": "Navis Asset",
+}
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
@@ -20,13 +28,6 @@ INSTALLED_APPS = [
     'corsheaders',
 
 ]
-JAZZMIN_SETTINGS = {
-    "site_title": "Navis Admin",
-    "site_header": "Navis Админка",
-    "site_brand": "Navis",
-    "welcome_sign": "Добро пожаловать в Navis!",
-    "copyright": "Navis Asset",
-}
 JAZZMIN_UI_TWEAKS = {
     "navbar_small_text": True,
     "footer_small_text": True,
@@ -160,3 +161,8 @@ CORS_ALLOW_ALL_HEADERS = True
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_HEADERS = ["*"]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

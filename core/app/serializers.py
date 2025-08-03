@@ -1,27 +1,22 @@
 from rest_framework import serializers
-from .models import Partners, FAQ, News, Review, Application
+from . import models
 
 class PartnersSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Partners
+        model = models.Partners
         fields = '__all__'
 
 class FAQSerializer(serializers.ModelSerializer):
     class Meta:
-        model = FAQ
+        model = models.FAQ
         fields = '__all__'
 
 class NewsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = News
+        model = models.News
         fields = '__all__'
 
 class ReviewSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Review
-        fields = '__all__'
-
-class ApplicationSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Application
+        model = models.Review
         fields = '__all__'
