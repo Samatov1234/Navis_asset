@@ -7,7 +7,7 @@ class Partners(models.Model):
         verbose_name = "Партнеры"
         ordering = ['id']
 
-class QuestionsAnswers(models.Model):
+class FAQ(models.Model):
     question = models.CharField(max_length=250, verbose_name="Вопросы")
     answer = models.TextField(verbose_name="Ответы")
 
