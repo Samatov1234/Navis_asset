@@ -63,6 +63,6 @@ class ReviewViewSet(viewsets.ModelViewSet):
     partial_update=extend_schema(summary="Частично обновить Application"),
     destroy=extend_schema(summary="Удалить Application"),
 )
-class ApplicationVIewSet(viewsets.ModelViewSet):
+class ApplicationViewSet(viewsets.ModelViewSet):
     queryset = Application.objects.all()
     serializer_class = FAQSerializer
