@@ -1,14 +1,15 @@
 from rest_framework import generics
-from .models import Partners, FAQ, News, Review
-from .serializers import PartnersSerializer, FAQSerializer, NewsSerializer, ReviewSerializer
+from .models import Partner, FAQ, News, Feedback, Application
+from .serializers import PartnerSerializer, FAQSerializer, NewsSerializer, FeedbackSerializer, ApplicationSerializer
 
-class PartnersList(generics.ListAPIView):
-    queryset = Partners.objects.all()
-    serializer_class = PartnersSerializer
 
-class PartnersDetail(generics.RetrieveAPIView):
-    queryset = Partners.objects.all()
-    serializer_class = PartnersSerializer
+class PartnerList(generics.ListAPIView):
+    queryset = Partner.objects.all()
+    serializer_class = PartnerSerializer
+
+class PartnerDetail(generics.RetrieveAPIView):
+    queryset = Partner.objects.all()
+    serializer_class = PartnerSerializer
 
 
 class FAQList(generics.ListAPIView):
@@ -28,10 +29,22 @@ class NewsDetail(generics.RetrieveAPIView):
     queryset = News.objects.all()
     serializer_class = NewsSerializer
 
-class ReviewList(generics.ListAPIView):
-    queryset = Review.objects.all()
-    serializer_class = ReviewSerializer
+class FeedbackList(generics.ListAPIView):
+    queryset = Feedback.objects.all()
+    serializer_class = FeedbackSerializer
 
-class ReviewDetail(generics.RetrieveAPIView):
-    queryset = Review.objects.all()
-    serializer_class = ReviewSerializer
+class FeedbackDetail(generics.RetrieveAPIView):
+    queryset = Feedback.objects.all()
+    serializer_class = FeedbackSerializer
+
+class ApplicationList(generics.ListAPIView):
+    queryset = Application.objects.all()
+    serializer_class = ApplicationSerializer
+
+class ApplicationDetail(generics.RetrieveAPIView):
+    queryset = Application.objects.all()
+    serializer_class = ApplicationSerializer
+
+class ApplicationCreate(generics.CreateAPIView):
+    queryset = Application.objects.all()
+    serializer_class = ApplicationSerializer

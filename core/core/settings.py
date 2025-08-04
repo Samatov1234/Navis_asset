@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     'drf_spectacular',
     'drf_spectacular_sidecar',
     'corsheaders',
+    'django_countries',
+    'users',
 
 ]
 JAZZMIN_UI_TWEAKS = {
@@ -166,3 +168,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+AUTH_USER_MODEL = 'users.User'
