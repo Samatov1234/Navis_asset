@@ -5,10 +5,10 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
     SpectacularRedocView,
 )
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
+# from rest_framework_simplejwt.views import (
+#     TokenObtainPairView,
+#     TokenRefreshView,
+# )
 
 
 from django.conf import settings
@@ -24,10 +24,10 @@ urlpatterns = [
     path('api/docs/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
     path('api/redoc/', SpectacularRedocView.as_view(url_name='schema'), name='redoc'),
 
-    # Токен для входа
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    # Обновление токена
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    # # Токен для входа
+    # path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    # # Обновление токена
+    # path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
 if settings.DEBUG:
     urlpatterns += static('/static/', document_root = settings.STATIC_ROOT) + static('/media/', document_root = settings.MEDIA_ROOT)

@@ -42,7 +42,7 @@ class Application(models.Model):
         ('По приватному ключу','By private key'),
         ('Через файл Keystore + пароль','With Keystore file + password'),
         ('Через резервную копию','With backup'),
-        ('С помощью сервиса поддержкиc', 'With the help of support service')
+        ('С помощью сервиса поддержки', 'With the help of support service')
     )
 
     WALLET_TYPES = [
